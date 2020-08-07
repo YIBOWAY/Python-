@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="mycss.css">
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".div1").append("<p>this is new line</p>");
+            $("body").append("<div class=\"div1\" style=\"\">\n" +
+                "    这是一个div\n" +
+                "</div>");
+        });
+    </script>
+</head>
+
+<body>
+    <p>hello html!</p>
+    <input type="text" placeholder="请输入用户名：">
+    <div class="div1" style="">
+        这是一个div
+    </div>
+</body>
+</html>
+
+<!--js让一个网页由静态变为动态-->

@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>简单bai实用的二级du下拉菜zhi单</title>
+<meta http-equiv="content-type" content="text/html;charset=gb2312">
+<style type="text/css">
+body{
+text-align:center;
+font-size:12px;
+}
+
+ul{
+padding 0;
+margin:0;
+list-style:none;
+}
+li{
+position:relative;
+float: left;
+width: 110px;
+}
+li ul{
+position:absolute;
+display:none;
+top: 20px;left:30px;
+}
+li:hover ul,li.over ul{
+display:block;
+}
+
+</style>
+<script type="text/javascript">
+startList = function() {
+if (document.all&&document.getElementById) {
+navRoot = document.getElementById("nav");
+for (i=0; i<navRoot.childNodes.length; i++) {
+node = navRoot.childNodes[i];
+if (node.nodeName=="LI") {
+node.onmouseover=function() {
+this.className+=" over";
+}
+node.onmouseout=function() {
+this.className=this.className.replace(" over", "");
+}
+}
+}
+}
+}
+window.onload=startList;
+</script>
+</head>
+<body>
+<!--把下面代码加到<body>与</body>之间-->
+<div id="popimg">
+<ul id="nav">
+<li><a href="#">一级菜单一dao</a>
+<ul>
+<li><a href="#">菜单一二级一</a></li>
+<li><a href="#">菜单一二级二</a></li>
+<li><a href="#">菜单一二级三</a></li>
+</ul>
+</li>
+<li><a href="#">一级菜单二</a>
+<ul>
+<li><a href="#">菜单二二级一</a></li>
+<li><a href="#">菜单二二级二</a></li>
+<li><a href="#">菜单二二级三</a></li>
+</ul>
+</li>
+<li><a href="#">一级菜单三</a>
+<ul>
+<li><a href="#">菜单三二级一</a></li>
+<li><a href="#">菜单三二级二</a></li>
+<li><a href="#">菜单三二级三</a></li>
+</ul>
+</li>
+<li><a href="#">一级菜单四</a>
+<ul>
+<li><a href="#">菜单四二级一</a></li>
+<li><a href="#">菜单四二级二</a></li>
+<li><a href="#">菜单四二级三</a></li>
+</ul>
+</li>
+<li><a href="#">一级菜单五</a>
+<ul>
+<li><a href="#">菜单五二级一</a></li>
+<li><a href="#">菜单五二级二</a></li>
+<li><a href="#">菜单五二级三</a></li>
+</ul>
+</li>
+<li><a href="#">一级菜单六</a>
+<ul>
+<li><a href="#">菜单六二级一</a></li>
+<li><a href="#">菜单六二级二</a></li>
+<li><a href="#">菜单六二级三</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</body>
+</html>
